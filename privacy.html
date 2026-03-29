@@ -3,20 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>سياسة الخصوصية - تطبيق مسبحة الأذكار</title>
+    <title>سياسة الخصوصية - تطبيق Mesbaha مسبحة</title>
     <style>
-        :root {
-            --primary: #4CAF50;
-            --primary-dark: #388E3C;
-            --primary-light: #C8E6C9;
-            --accent: #FFC107;
-            --text-primary: #212121;
-            --text-secondary: #757575;
-            --bg-color: #F8F8F8;
-            --card-color: #FFFFFF;
-            --divider: #BDBDBD;
-        }
-
         * {
             margin: 0;
             padding: 0;
@@ -24,225 +12,237 @@
         }
 
         body {
-            font-family: 'Almarai', 'Segoe UI', Tahoma, sans-serif;
-            background-color: var(--bg-color);
-            color: var(--text-primary);
-            line-height: 1.6;
-            display: flex;
-            flex-direction: column;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, #0a1628 0%, #1a2744 50%, #0d1f3c 100%);
+            color: #e0e6ed;
+            line-height: 1.8;
             min-height: 100vh;
         }
 
         .container {
-            max-width: 1000px;
+            max-width: 900px;
             margin: 0 auto;
-            padding: 20px;
-            flex: 1;
+            padding: 40px 24px;
         }
 
         header {
-            background-color: var(--primary);
-            color: white;
             text-align: center;
-            padding: 40px 20px;
-            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+            margin-bottom: 48px;
+            padding: 40px 24px;
+            background: rgba(255, 255, 255, 0.05);
+            border-radius: 20px;
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(10px);
         }
 
         header h1 {
-            margin-bottom: 15px;
-            font-size: 2.5rem;
+            font-size: 2rem;
+            color: #4fc3f7;
+            margin-bottom: 8px;
         }
 
-        header p {
+        header .app-name {
             font-size: 1.2rem;
-            opacity: 0.9;
+            color: #90caf9;
+            margin-bottom: 16px;
         }
 
-        .policy-card {
-            background-color: var(--card-color);
-            border-radius: 10px;
-            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
-            padding: 30px;
-            margin: 30px 0;
+        header .developer-info {
+            font-size: 0.95rem;
+            color: #b0bec5;
+            margin-top: 12px;
+            padding-top: 12px;
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
         }
 
-        .policy-card h2 {
-            color: var(--primary);
-            margin-bottom: 20px;
-            border-bottom: 2px solid var(--primary-light);
-            padding-bottom: 10px;
-            font-size: 1.8rem;
+        header .last-updated {
+            font-size: 0.85rem;
+            color: #78909c;
+            margin-top: 8px;
         }
 
-        .policy-card h3 {
-            color: var(--primary-dark);
-            margin: 25px 0 15px;
+        nav {
+            background: rgba(255, 255, 255, 0.03);
+            border-radius: 16px;
+            padding: 24px;
+            margin-bottom: 40px;
+            border: 1px solid rgba(255, 255, 255, 0.08);
+        }
+
+        nav h2 {
+            color: #4fc3f7;
+            margin-bottom: 16px;
+            font-size: 1.1rem;
+        }
+
+        nav ul {
+            list-style: none;
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+            gap: 8px;
+        }
+
+        nav a {
+            color: #90caf9;
+            text-decoration: none;
+            padding: 8px 12px;
+            border-radius: 8px;
+            display: block;
+            transition: all 0.3s;
+            font-size: 0.9rem;
+        }
+
+        nav a:hover {
+            background: rgba(79, 195, 247, 0.1);
+            color: #4fc3f7;
+        }
+
+        section {
+            background: rgba(255, 255, 255, 0.03);
+            border-radius: 16px;
+            padding: 32px;
+            margin-bottom: 24px;
+            border: 1px solid rgba(255, 255, 255, 0.08);
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+
+        section:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+        }
+
+        h2 {
+            color: #4fc3f7;
             font-size: 1.4rem;
+            margin-bottom: 16px;
+            padding-bottom: 12px;
+            border-bottom: 2px solid rgba(79, 195, 247, 0.3);
         }
 
-        .policy-card p, .policy-card ul, .policy-card ol {
-            margin-bottom: 15px;
+        h3 {
+            color: #81d4fa;
+            font-size: 1.1rem;
+            margin: 20px 0 12px;
         }
 
-        .policy-card ul, .policy-card ol {
-            padding-right: 20px;
+        ul {
+            padding-right: 24px;
+            margin: 12px 0;
         }
 
-        .policy-card li {
-            margin-bottom: 10px;
+        li {
+            margin-bottom: 8px;
+            color: #b0bec5;
+        }
+
+        li strong {
+            color: #e0e6ed;
+        }
+
+        p {
+            margin-bottom: 12px;
+            color: #b0bec5;
         }
 
         .highlight {
-            background-color: var(--primary-light);
-            padding: 15px;
-            border-radius: 5px;
-            margin: 20px 0;
-        }
-
-        .highlight strong {
-            color: var(--primary-dark);
-        }
-
-        .date {
-            font-style: italic;
-            color: var(--text-secondary);
-            margin: 20px 0;
-            text-align: left;
-            direction: ltr;
+            background: rgba(79, 195, 247, 0.1);
+            border-right: 4px solid #4fc3f7;
+            padding: 16px 20px;
+            border-radius: 0 12px 12px 0;
+            margin: 16px 0;
         }
 
         footer {
-            background-color: var(--primary-dark);
-            color: white;
             text-align: center;
-            padding: 20px;
-            margin-top: 30px;
+            padding: 32px 24px;
+            margin-top: 48px;
+            background: rgba(255, 255, 255, 0.03);
+            border-radius: 20px;
+            border: 1px solid rgba(255, 255, 255, 0.08);
         }
 
-        footer a {
-            color: var(--accent);
+        footer .contact-info {
+            margin-bottom: 16px;
+        }
+
+        footer .contact-info p {
+            color: #90caf9;
+            margin-bottom: 4px;
+        }
+
+        footer .contact-info a {
+            color: #4fc3f7;
             text-decoration: none;
         }
 
-        footer a:hover {
+        footer .contact-info a:hover {
             text-decoration: underline;
         }
 
-        .contact-info {
-            background-color: var(--primary-light);
-            color: var(--text-primary);
-            padding: 20px;
-            border-radius: 5px;
-            margin-top: 30px;
+        footer .copyright {
+            color: #546e7a;
+            font-size: 0.85rem;
+            margin-top: 16px;
+            padding-top: 16px;
+            border-top: 1px solid rgba(255, 255, 255, 0.08);
         }
 
-        .contact-info h3 {
-            color: var(--primary-dark);
-            margin-bottom: 15px;
-        }
+        @media (max-width: 600px) {
+            .container {
+                padding: 20px 16px;
+            }
 
-        .contact-info p {
-            margin-bottom: 10px;
-        }
-
-        @media (max-width: 768px) {
             header h1 {
-                font-size: 2rem;
-            }
-            
-            .policy-card {
-                padding: 20px;
-            }
-            
-            .policy-card h2 {
                 font-size: 1.5rem;
             }
-            
-            .policy-card h3 {
-                font-size: 1.2rem;
+
+            section {
+                padding: 20px;
             }
-        }
 
-        /* Arabic Font Enhancement */
-        @font-face {
-            font-family: 'Almarai';
-            src: url('https://fonts.googleapis.com/css2?family=Almarai:wght@300;400;700&display=swap');
-            font-display: swap;
-        }
-
-        /* Navigation */
-        .toc {
-            background-color: var(--primary-light);
-            padding: 20px;
-            border-radius: 10px;
-            margin-bottom: 30px;
-        }
-
-        .toc h3 {
-            color: var(--primary-dark);
-            margin-bottom: 15px;
-        }
-
-        .toc ul {
-            list-style-type: none;
-        }
-
-        .toc li {
-            margin-bottom: 10px;
-        }
-
-        .toc a {
-            color: var(--primary-dark);
-            text-decoration: none;
-            transition: all 0.3s ease;
-        }
-
-        .toc a:hover {
-            color: var(--primary);
-            padding-right: 5px;
-        }
-
-        /* Decorative elements */
-        .decoration {
-            text-align: center;
-            margin: 20px 0;
-            color: var(--primary);
-            font-size: 1.5rem;
+            nav ul {
+                grid-template-columns: 1fr;
+            }
         }
     </style>
 </head>
 <body>
-    <header>
-        <h1>سياسة الخصوصية</h1>
-        <p>تطبيق مسبحة الأذكار (Tasbih App)</p>
-    </header>
-
     <div class="container">
-        <div class="policy-card">
-            <div class="toc">
-                <h3>جدول المحتويات</h3>
-                <ul>
-                    <li><a href="#intro">مقدمة</a></li>
-                    <li><a href="#data-collection">البيانات التي نجمعها</a></li>
-                    <li><a href="#data-use">كيفية استخدام البيانات</a></li>
-                    <li><a href="#data-sharing">مشاركة البيانات</a></li>
-                    <li><a href="#user-rights">حقوق المستخدم</a></li>
-                    <li><a href="#security">أمن البيانات</a></li>
-                    <li><a href="#children">خصوصية الأطفال</a></li>
-                    <li><a href="#changes">التغييرات في سياسة الخصوصية</a></li>
-                    <li><a href="#contact">معلومات الاتصال</a></li>
-                </ul>
+        <header>
+            <h1>سياسة الخصوصية</h1>
+            <div class="app-name">تطبيق Mesbaha مسبحة (Mesbaha App)</div>
+            <div class="developer-info">
+                <strong>المطور:</strong> أحمد كتاف (Ahmad Kataf)<br>
+                <strong>البريد الإلكتروني:</strong> <a href="mailto:kataf.ahmad@gmail.com" style="color: #4fc3f7;">kataf.ahmad@gmail.com</a>
             </div>
+            <div class="last-updated">آخر تحديث: 29 مارس 2026</div>
+        </header>
 
-            <h2 id="intro">مقدمة</h2>
-            <p>نحن في تطبيق مسبحة الأذكار، نلتزم بحماية خصوصيتك واحترام حقوقك المتعلقة ببياناتك. تشرح سياسة الخصوصية هذه كيفية جمع واستخدام وحماية المعلومات عند استخدام تطبيقنا.</p>
-            <p>يهدف تطبيق مسبحة الأذكار إلى تقديم طريقة سهلة ومريحة للمسلمين لأداء الأذكار اليومية وتسبيح الله سبحانه وتعالى، وتتبع إحصاءاتهم الروحية، كل ذلك مع الحفاظ على خصوصيتهم.</p>
+        <nav>
+            <h2>المحتويات</h2>
+            <ul>
+                <li><a href="#intro">مقدمة</a></li>
+                <li><a href="#data-collection">البيانات التي نجمعها</a></li>
+                <li><a href="#data-use">كيفية استخدام البيانات</a></li>
+                <li><a href="#data-sharing">مشاركة البيانات</a></li>
+                <li><a href="#user-rights">حقوق المستخدم</a></li>
+                <li><a href="#security">أمن البيانات</a></li>
+                <li><a href="#children">خصوصية الأطفال</a></li>
+                <li><a href="#changes">التغييرات في سياسة الخصوصية</a></li>
+                <li><a href="#contact">معلومات الاتصال</a></li>
+            </ul>
+        </nav>
 
-            <div class="decoration">❁ ❁ ❁</div>
+        <section id="intro">
+            <h2>مقدمة</h2>
+            <p>نحن، المطور أحمد كتاف (Ahmad Kataf)، مطور تطبيق <strong>Mesbaha مسبحة</strong> المتاح على متجر Google Play، نلتزم بحماية خصوصيتك واحترام حقوقك المتعلقة ببياناتك. تشرح سياسة الخصوصية هذه كيفية جمع واستخدام وحماية المعلومات عند استخدام تطبيقنا.</p>
+            <p>يهدف تطبيق <strong>Mesbaha مسبحة</strong> إلى تقديم طريقة سهلة ومريحة للمسلمين لأداء الأذكار اليومية وتسبيح الله سبحانه وتعالى، وتتبع إحصاءاتهم الروحية، كل ذلك مع الحفاظ على خصوصيتهم.</p>
+        </section>
 
-            <h2 id="data-collection">البيانات التي نجمعها</h2>
-            <p>تطبيق مسبحة الأذكار يحترم خصوصيتك ويسعى إلى تقليل كمية البيانات المجمعة. نحن نجمع ونخزن البيانات التالية:</p>
-            
+        <section id="data-collection">
+            <h2>البيانات التي نجمعها</h2>
+            <p>تطبيق <strong>Mesbaha مسبحة</strong> يحترم خصوصيتك ويسعى إلى تقليل كمية البيانات المجمعة. نحن نجمع ونخزن البيانات التالية:</p>
+
             <h3>البيانات المخزنة محليًا على جهازك:</h3>
             <ul>
                 <li><strong>تفضيلات المستخدم:</strong> مثل إعدادات السمة، تفعيل الإشعارات، وخيارات العرض.</li>
@@ -256,14 +256,10 @@
                 <li><strong>إعدادات التكوين البعيد:</strong> نستخدم Firebase Remote Config للحصول على إعدادات التطبيق عن بُعد.</li>
                 <li><strong>معلومات الأخطاء:</strong> قد نقوم بجمع تقارير الأخطاء لتحسين أداء التطبيق من خلال Firebase Crashlytics (إذا تم تفعيلها).</li>
             </ul>
+        </section>
 
-            <div class="highlight">
-                <strong>ملاحظة مهمة:</strong> تطبيق مسبحة الأذكار لا يجمع أي معلومات شخصية كالاسم، البريد الإلكتروني، رقم الهاتف، الموقع الجغرافي، أو أي معلومات تعريف شخصية أخرى.
-            </div>
-
-            <div class="decoration">❁ ❁ ❁</div>
-
-            <h2 id="data-use">كيفية استخدام البيانات</h2>
+        <section id="data-use">
+            <h2>كيفية استخدام البيانات</h2>
             <p>نحن نستخدم البيانات التي نجمعها للأغراض التالية:</p>
             <ul>
                 <li><strong>توفير وتحسين الخدمة:</strong> لتمكينك من استخدام ميزات التطبيق، مثل تتبع عدد التسابيح والتنبيهات عند إكمال الهدف.</li>
@@ -271,28 +267,28 @@
                 <li><strong>تحليل الأداء:</strong> لفهم كيفية استخدام التطبيق وتحسين تجربة المستخدم.</li>
                 <li><strong>إصلاح الأخطاء:</strong> لتحديد وإصلاح المشكلات التقنية في التطبيق.</li>
             </ul>
+        </section>
 
-            <div class="decoration">❁ ❁ ❁</div>
-
-            <h2 id="data-sharing">مشاركة البيانات</h2>
+        <section id="data-sharing">
+            <h2>مشاركة البيانات</h2>
             <p>نحن نتعامل مع بياناتك بجدية ونلتزم بعدم بيعها أو تأجيرها لأطراف ثالثة. ومع ذلك، قد نشارك البيانات في الظروف التالية:</p>
-            
+
             <h3>مزودو الخدمة:</h3>
             <p>نستخدم خدمات طرف ثالث لدعم التطبيق، مثل:</p>
             <ul>
                 <li><strong>Google Firebase:</strong> للتكوين عن بُعد وتحليل الأداء.</li>
                 <li><strong>Google Play Services:</strong> لتوفير خدمات أساسية للتطبيق على نظام Android.</li>
             </ul>
-            
+
             <h3>مشاركة التقدم:</h3>
             <p>عندما تستخدم ميزة "مشاركة التقدم" في التطبيق، سيتم مشاركة معلومات محددة (مثل عدد التسابيح والذكر الحالي) مع الأشخاص الذين تختار مشاركتها معهم. هذه المشاركة تكون فقط بناءً على طلبك الصريح ولا تتم بشكل تلقائي.</p>
-            
+
             <h3>المتطلبات القانونية:</h3>
             <p>قد نكشف عن معلوماتك إذا كان ذلك مطلوبًا بموجب القانون أو في استجابة لطلبات قانونية صالحة من السلطات العامة.</p>
+        </section>
 
-            <div class="decoration">❁ ❁ ❁</div>
-
-            <h2 id="user-rights">حقوق المستخدم</h2>
+        <section id="user-rights">
+            <h2>حقوق المستخدم</h2>
             <p>نحن نحترم حقوقك فيما يتعلق ببياناتك الشخصية. لديك الحقوق التالية:</p>
             <ul>
                 <li><strong>الوصول:</strong> يمكنك الوصول إلى بياناتك المخزنة في التطبيق في أي وقت.</li>
@@ -301,45 +297,49 @@
                 <li><strong>نقل البيانات:</strong> جميع البيانات تُخزن بتنسيقات قياسية يمكن نقلها بسهولة.</li>
                 <li><strong>الاعتراض:</strong> يمكنك الاعتراض على معالجة بياناتك في أي وقت.</li>
             </ul>
-            
-            <p>إذا كنت ترغب في ممارسة أي من هذه الحقوق أو كانت لديك استفسارات، يرجى التواصل معنا عبر معلومات الاتصال أدناه.</p>
-
-            <div class="decoration">❁ ❁ ❁</div>
-
-            <h2 id="security">أمن البيانات</h2>
-            <p>نحن نتخذ تدابير أمنية مناسبة لحماية بياناتك من الوصول غير المصرح به أو التعديل أو الإفصاح أو الإتلاف. جميع البيانات الشخصية تُخزن محليًا على جهازك وتخضع لمستوى الأمان الذي يوفره نظام التشغيل الخاص بك.</p>
-            
-            <p>البيانات المرسلة إلى خدمات مثل Firebase تتم عبر اتصالات مشفرة وتخضع لسياسات الخصوصية والأمان الخاصة بتلك الخدمات.</p>
-
-            <div class="decoration">❁ ❁ ❁</div>
-
-            <h2 id="children">خصوصية الأطفال</h2>
-            <p>تطبيق مسبحة الأذكار مناسب لجميع الفئات العمرية، بما في ذلك الأطفال. نحن لا نجمع عن قصد أي معلومات شخصية من الأطفال دون سن 13 عامًا. إذا كنت ولي أمر أو وصي وتعتقد أن طفلك قدم معلومات شخصية، يرجى الاتصال بنا وسنتخذ الإجراءات المناسبة لإزالة هذه المعلومات.</p>
-
-            <div class="decoration">❁ ❁ ❁</div>
-
-            <h2 id="changes">التغييرات في سياسة الخصوصية</h2>
-            <p>قد نقوم بتحديث سياسة الخصوصية هذه من وقت لآخر. سنخطرك بأي تغييرات جوهرية من خلال نشر السياسة الجديدة على هذه الصفحة وتحديث تاريخ "آخر تحديث" أدناه.</p>
-            
-            <p>نشجعك على مراجعة سياسة الخصوصية هذه بشكل دوري للبقاء على اطلاع بكيفية حمايتنا لمعلوماتك.</p>
-            
-            <div class="date">آخر تحديث: 16 أبريل 2025</div>
-
-            <div class="decoration">❁ ❁ ❁</div>
-
-            <h2 id="contact">معلومات الاتصال</h2>
-            <div class="contact-info">
-                <h3>للاستفسارات حول سياسة الخصوصية:</h3>
-                <p>الاسم: أحمد كتاف</p>
-                <p>البريد الإلكتروني: kataf.ahmad@gmail.com</p>
-                <p>الموقع الإلكتروني: https://github.com/ahmadkataf/tasbeeh</p>
+            <div class="highlight">
+                <p>إذا كنت ترغب في ممارسة أي من هذه الحقوق أو كانت لديك استفسارات، يرجى التواصل معنا عبر معلومات الاتصال أدناه.</p>
             </div>
-        </div>
-    </div>
+        </section>
 
-    <footer>
-        <p>جميع الحقوق محفوظة &copy; 2025 تطبيق مسبحة الأذكار</p>
-        <p>تم التطوير بواسطة <a href="https://github.com/ahmadkataf">أحمد كتاف</a></p>
-    </footer>
+        <section id="security">
+            <h2>أمن البيانات</h2>
+            <p>نحن نتخذ تدابير أمنية مناسبة لحماية بياناتك من الوصول غير المصرح به أو التعديل أو الإفصاح أو الإتلاف. جميع البيانات الشخصية تُخزن محليًا على جهازك وتخضع لمستوى الأمان الذي يوفره نظام التشغيل الخاص بك.</p>
+            <p>البيانات المرسلة إلى خدمات مثل Firebase تتم عبر اتصالات مشفرة وتخضع لسياسات الخصوصية والأمان الخاصة بتلك الخدمات.</p>
+        </section>
+
+        <section id="children">
+            <h2>خصوصية الأطفال</h2>
+            <p>تطبيق <strong>Mesbaha مسبحة</strong> مناسب لجميع الفئات العمرية، بما في ذلك الأطفال. نحن لا نجمع عن قصد أي معلومات شخصية من الأطفال دون سن 13 عامًا. إذا كنت ولي أمر أو وصي وتعتقد أن طفلك قدم معلومات شخصية، يرجى الاتصال بنا وسنتخذ الإجراءات المناسبة لإزالة هذه المعلومات.</p>
+        </section>
+
+        <section id="changes">
+            <h2>التغييرات في سياسة الخصوصية</h2>
+            <p>قد نقوم بتحديث سياسة الخصوصية هذه من وقت لآخر. سنخطرك بأي تغييرات جوهرية من خلال نشر السياسة الجديدة على هذه الصفحة وتحديث تاريخ "آخر تحديث" أدناه.</p>
+            <p>نشجعك على مراجعة سياسة الخصوصية هذه بشكل دوري للبقاء على اطلاع بكيفية حمايتنا لمعلوماتك.</p>
+        </section>
+
+        <section id="contact">
+            <h2>معلومات الاتصال</h2>
+            <p>إذا كانت لديك أي أسئلة أو استفسارات حول سياسة الخصوصية هذه أو حول تطبيق <strong>Mesbaha مسبحة</strong>، يرجى التواصل معنا:</p>
+            <div class="highlight">
+                <p><strong>المطور:</strong> أحمد كتاف (Ahmad Kataf)</p>
+                <p><strong>البريد الإلكتروني:</strong> <a href="mailto:kataf.ahmad@gmail.com" style="color: #4fc3f7;">kataf.ahmad@gmail.com</a></p>
+                <p><strong>GitHub:</strong> <a href="https://github.com/ahmadkataf" style="color: #4fc3f7;">https://github.com/ahmadkataf</a></p>
+            </div>
+        </section>
+
+        <footer>
+            <div class="contact-info">
+                <p><strong>تطبيق Mesbaha مسبحة</strong></p>
+                <p>المطور: أحمد كتاف (Ahmad Kataf)</p>
+                <p><a href="mailto:kataf.ahmad@gmail.com">kataf.ahmad@gmail.com</a></p>
+            </div>
+            <div class="copyright">
+                جميع الحقوق محفوظة &copy; 2025-2026 تطبيق Mesbaha مسبحة<br>
+                تم التطوير بواسطة أحمد كتاف (Ahmad Kataf)
+            </div>
+        </footer>
+    </div>
 </body>
 </html>
